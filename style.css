@@ -1,36 +1,45 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wrapper {
-    min-height: 100vh;
-    background: linear-gradient(178.8deg, #955FEC 1.03%, rgba(150, 125, 190, 0) 20.28%, rgba(149, 95, 236, 0.58) 39.53%, rgba(84, 28, 175, 0) 58.77%, rgba(150, 125, 190, 0) 78.02%, rgba(212, 91, 215, 0.51) 97.27%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
+  min-height: 100vh;
+  background: linear-gradient(
+    178.8deg,
+    #955fec 1.03%,
+    rgba(150, 125, 190, 0) 20.28%,
+    rgba(149, 95, 236, 0.58) 39.53%,
+    rgba(84, 28, 175, 0) 58.77%,
+    rgba(150, 125, 190, 0) 78.02%,
+    rgba(212, 91, 215, 0.51) 97.27%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.calculator{
-    background:#f37575ce;
-    width: 400px;
-    color: rgb(6, 12, 12);
-    padding: 2rem 1.5rem;
-    border-radius: 5px;
-    display: grid;
-    gap: 1rem;
-    grid-template-areas: 
+.calculator {
+  background: #f37575ce;
+  width: 400px;
+  color: rgb(6, 12, 12);
+  padding: 2rem 1.5rem;
+  border-radius: 5px;
+  display: grid;
+  /*  */
+  backdrop-filter: blur(2px);
+  gap: 1rem;
+  grid-template-areas:
     "display display display display"
     "ac c percentage division"
     "btn7 btn8 btn9 btnx"
     "btn4 btn5 btn6 minus"
     "btn1 btn2 btn3 plus"
-    "btn0 btn0 dot equals"
+    "btn0 btn0 dot equals";
 
-    /* background: Linear Gradient
+  /* background: Linear Gradient
     #F28383
     79%
     #BF7474
@@ -42,65 +51,98 @@ body {
     #934545
     47.4% */
 }
-.display{
-    grid-area:display;
 
+.calculator div {
+  height: 50px;
+  background: rgba(207, 204, 204, 0.58);
+  filter: drop-shadow(-12px 12px 14px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: black;
+  font-size: 2rem;
+  /* box-shadow: 0px 4px 4px rgba(0,0,0,0.25); */
+
+  /* calculator div: nth(:first-child) {
+        background color: a18399;
+        color: white;
+
+*/
+}
+.calculator div.display {
+  grid-area: display;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.btn-ac{ grid-area:ac;
-
+.btn-ac {
+  grid-area: ac;
 }
-.btn-c{
-grid-area:c;
+.btn-c {
+  grid-area: c;
 }
-.btn-percentage{
-grid-area:percentage;
+.btn-percentage {
+  grid-area: percentage;
 }
-.btn-division{
-grid-area:division;
+.btn-division {
+  grid-area: division;
 }
-.btn-7{
-grid-area:btn7;
+.btn-7 {
+  grid-area: btn7;
 }
-.btn-8{
-grid-area:btn8;
+.btn-8 {
+  grid-area: btn8;
 }
-.btn-9{
-grid-area:btn9;
+.btn-9 {
+  grid-area: btn9;
 }
-.btn-x{
-grid-area:btnx;
+.btn-x {
+  grid-area: btnx;
 }
-.btn-4{
-    grid-area:btn4;
+.btn-4 {
+  grid-area: btn4;
 }
-.btn-5{
-grid-area:btn5;
+.btn-5 {
+  grid-area: btn5;
 }
-.btn-6{
-grid-area:btn6;
+.btn-6 {
+  grid-area: btn6;
 }
-.btn-minus{
-grid-area:minus;
+.btn-minus {
+  grid-area: minus;
 }
-.btn-1{
-grid-area:btn1;
+.btn-1 {
+  grid-area: btn1;
 }
-.btn-2{
-grid-area:btn2;
+.btn-2 {
+  grid-area: btn2;
 }
-.btn-3{
-grid-area:btn3;
+.btn-3 {
+  grid-area: btn3;
 }
-.btn-plus{
-grid-area:plus;
+.btn-plus {
+  grid-area: plus;
 }
-.btn-0{
-grid-area:btn0;
+.btn-0 {
+  grid-area: btn0;
 }
-.btn-dot{
-grid-area:dot;
+.btn-dot {
+  grid-area: dot;
 }
 .btn-equals {
-grid-area:equals;
+  grid-area: equals;
+}
+
+.circle {
+  background: linear-gradient(to right, red, purple);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: relative;
+  left: 75px;
+  top: 200px;
+  /* filter: blur(2px);  to make whole circle blurred*/
+  z-index: -1;
+   
 }
